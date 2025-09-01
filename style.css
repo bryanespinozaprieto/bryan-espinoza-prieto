@@ -1,69 +1,81 @@
-body {
+/* Reset básico */
+* {
   margin: 0;
-  font-family: 'Lato', sans-serif;
-  background: #fdfdfd;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* 🔹 Banner */
+/* Fuente */
+body {
+  font-family: 'Lato', sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+
+/* Banner */
 .banner {
   position: relative;
-  text-align: center;
-  color: white;
+  width: 100%;
+  height: 350px;
   overflow: hidden;
 }
+
 .banner img {
   width: 100%;
-  height: auto;
-  max-height: 250px;
+  height: 100%;
   object-fit: cover;
-  object-position: center 30%;
-  filter: brightness(70%);
+  object-position: center top; /* Ajusta la posición del banner verticalmente */
 }
+
 .banner-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: white;
   text-align: center;
-}
-.banner-text h1 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2.6rem;
-  margin: 0;
-}
-.banner-text p {
-  font-size: 1.3rem;
-  margin-top: 0.5rem;
-  font-weight: 500;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
 }
 
-/* 🔹 Menú */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
-  background: #13315c;
-  color: white;
+.banner-text h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
 }
-nav ul {
+
+.banner-text p {
+  font-size: 1.2rem;
+}
+
+/* Menú */
+header {
+  background: #13315c;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+}
+
+header nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  margin: 0;
-  padding: 0;
 }
-nav ul li {
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
   transition: color 0.3s;
 }
-nav ul li:hover {
+
+header nav ul li a:hover {
   color: #ffcc00;
 }
-.lang-switch {
-  margin-left: 2rem;
-}
+
 .lang-switch img {
   width: 28px;
   height: 20px;
@@ -72,19 +84,18 @@ nav ul li:hover {
   border: 1px solid #fff;
 }
 
-/* 🔹 Contenido */
+/* Contenido general */
 .content {
   padding: 2rem;
-}
-.hidden {
-  display: none;
+  max-width: 1000px;
+  margin: auto;
 }
 
-/* 🔹 Home Intro */
+/* Home Intro */
 .home-intro {
   display: flex;
   flex-wrap: wrap;
-  align-items: center; /* centra verticalmente el texto con la foto */
+  align-items: center;
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -101,11 +112,63 @@ nav ul li:hover {
   flex: 1;
   font-size: 1.05rem;
   line-height: 1.8;
-  color: #333;
-  padding-right: 1rem;
 }
 
-/* 🔹 Responsive */
+/* Cards (CV) */
+.card {
+  background: #ffffff;
+  padding: 1.8rem 2rem;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+  max-width: 900px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.9rem;
+  color: #13315c;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  color: #13315c;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.card ul {
+  list-style-type: disc;
+  margin-left: 2rem;
+  line-height: 1.6;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Botón */
+.btn {
+  display: inline-block;
+  padding: 0.6rem 1rem;
+  background: #13315c;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ffcc00;
+  color: #13315c;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .home-intro {
     flex-direction: column;
@@ -114,8 +177,16 @@ nav ul li:hover {
   }
   .intro-text {
     flex: unset;
-    padding: 0 1rem;
     font-size: 1rem;
     line-height: 1.6;
+  }
+  header nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  .lang-switch {
+    margin-top: 1rem;
+    margin-left: 0;
   }
 }
