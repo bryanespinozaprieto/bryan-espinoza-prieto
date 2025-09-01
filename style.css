@@ -1,104 +1,102 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
     background-color: #f5f5f5;
-    color: #333;
 }
 
 header {
-    background-color: #004466;
-    color: white;
+    position: relative;
     text-align: center;
-    padding: 1em 0;
+    color: white;
 }
 
-header img.banner {
+header .banner {
     width: 100%;
-    max-height: 400px;
+    height: 400px;
     object-fit: cover;
-    object-position: center 40%;
+}
+
+header .header-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header h2 {
+    margin: 5px 0 0 0;
+    font-size: 1.5em;
+    font-weight: normal;
 }
 
 nav {
+    background-color: #0a4d7a;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #006699;
-    padding: 0.5em 0;
-    flex-wrap: wrap;
+    padding: 10px;
 }
 
 nav a {
     color: white;
     text-decoration: none;
-    margin: 0 1em;
+    margin: 0 15px;
     font-weight: bold;
 }
 
-nav a:hover {
-    text-decoration: underline;
-}
-
 nav .lang-btn {
-    width: 30px;
-    height: 20px;
-    margin-left: 1em;
+    width: 25px;
+    height: auto;
+    margin-left: 20px;
+    vertical-align: middle;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 2em auto;
-    padding: 0 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2em;
+.profile {
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: auto;
+    gap: 30px;
+}
+
+.profile img {
+    width: 300px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.profile .text {
+    flex: 1;
 }
 
 .card {
     background-color: white;
-    padding: 1.5em;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+    max-width: 450px;
 }
 
 .btn {
     display: inline-block;
-    background-color: #006699;
+    padding: 8px 15px;
+    background-color: #0a4d7a;
     color: white;
-    padding: 0.5em 1em;
-    text-decoration: none;
     border-radius: 5px;
-    margin-top: 1em;
-}
-
-.btn:hover {
-    background-color: #004466;
-}
-
-.publications-list {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.publications-list li {
-    margin-bottom: 1em;
-}
-
-.pub-author {
+    text-decoration: none;
     font-weight: bold;
-}
-
-em {
-    font-style: italic;
-}
-
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: 1fr;
-    }
 }
