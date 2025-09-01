@@ -2,86 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Bryan Espinoza-Prieto - Vegetation Types in Peru</title>
+  <title>Vegetation Types in Peru - Bryan Espinoza-Prieto</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Slider Styles */
-    .slider {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      margin: 2rem auto;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-    .slide {
-      min-width: 100%;
-      box-sizing: border-box;
-      position: relative;
-    }
-    .slide img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-      max-height: 600px;
-    }
-    .slide-text {
-      position: absolute;
-      top: 50%;
-      left: 5%;
-      transform: translateY(-50%);
-      color: white;
-      background: rgba(0,0,0,0.5);
-      padding: 1.5rem;
-      border-radius: 8px;
-      max-width: 45%;
-    }
-    .slide p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    /* Following slides: text below image */
-    .slide-below img {
-      max-height: 500px;
-      width: 100%;
-    }
-    .slide-below p {
-      position: relative;
-      top: 0;
-      background: none;
-      color: #333;
-      padding: 0.8rem 1rem;
-      font-size: 1.05rem;
-    }
-    /* Navigation */
-    .slider-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-    }
-    .slider-buttons button {
-      background: rgba(19, 49, 92, 0.6);
-      border: none;
-      color: white;
-      padding: 0.8rem 1.2rem;
-      cursor: pointer;
-      font-size: 1rem;
-      border-radius: 6px;
-    }
-    .slider-buttons button:hover {
-      background: #ffcc00;
-      color: #13315c;
-    }
-  </style>
 </head>
 <body>
 
@@ -94,14 +17,14 @@
     </div>
   </div>
 
-  <!-- Menú -->
+  <!-- Menu -->
   <header>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="cv.html">CV</a></li>
         <li><a href="publications.html">Publications</a></li>
-        <li><a href="vegetation.html">Vegetation Types in Peru</a></li>
+        <li><a href="vegetation.html">Vegetation Types</a></li>
       </ul>
       <div class="lang-switch">
         <a href="vegetation.html"><img src="https://flagcdn.com/w20/gb.png" alt="English"></a>
@@ -112,48 +35,43 @@
 
   <!-- Slider -->
   <div class="slider">
-    <div class="slides">
-      <!-- First Slide -->
-      <div class="slide">
-        <img src="img/peru.jpg" alt="Peru Map">
-        <div class="slide-text">
-          <h2>Vegetation Types of Peru</h2>
-          <p>Peru is one of the most biodiverse countries in the world, thanks to its unique geography that includes the Andes Mountains, the Amazon rainforest, and the Pacific coast. This incredible variety of climates and altitudes has created a wide range of ecosystems, each home to a rich array of plant and animal species. From the lush Amazonian forests and high-altitude Andean grasslands to the fog-fed coastal hills, Peru’s landscapes support diverse vegetation types, each with its own unique flora adapted to local conditions.</p>
-          <p>The following photos showcase the diversity of vegetation types across the country, highlighting areas where bryophytes have been observed or reported.</p>
-        </div>
+    <!-- Slide 1 -->
+    <div class="slide slide-1">
+      <div class="slide-text">
+        <h2>Vegetation Types of Peru</h2>
+        <p>
+          Peru is one of the most biodiverse countries in the world, thanks to its unique geography that includes the Andes Mountains, the Amazon rainforest, and the Pacific coast. This incredible variety of climates and altitudes has created a wide range of ecosystems, each home to a rich array of plant and animal species. From the lush Amazonian forests and high-altitude Andean grasslands to the fog-fed coastal hills, Peru’s landscapes support diverse vegetation types, each with its own unique flora adapted to local conditions.
+        </p>
+        <p>
+          The following photos showcase the diversity of vegetation types across the country, highlighting areas where bryophytes have been observed or reported.
+        </p>
       </div>
-      <!-- Placeholder slides for future images -->
-      <div class="slide slide-below">
-        <img src="img/amazon_forest.jpg" alt="Amazon Forest">
-        <p>Amazon Rainforest: Dense tropical forest with high bryophyte diversity.</p>
-      </div>
-      <div class="slide slide-below">
-        <img src="img/andes_grassland.jpg" alt="Andean Grassland">
-        <p>High-altitude Andean Grasslands: Open landscapes with unique moss species adapted to extreme conditions.</p>
+      <div class="slide-image">
+        <img src="img/peru-map.jpg" alt="Map of Peru">
       </div>
     </div>
 
-    <div class="slider-buttons">
-      <button id="prev">&#10094; Prev</button>
-      <button id="next">Next &#10095;</button>
+    <!-- Slide 2 -->
+    <div class="slide slide-2">
+      <div class="slide-image-full">
+        <img src="img/amazon-forest.jpg" alt="Amazon Forest">
+      </div>
+      <div class="slide-caption">
+        <p>Lush Amazonian rainforest with high bryophyte diversity.</p>
+      </div>
     </div>
+
+    <!-- Slide 3 -->
+    <div class="slide slide-3">
+      <div class="slide-image-full">
+        <img src="img/andean-puna.jpg" alt="Andean Puna">
+      </div>
+      <div class="slide-caption">
+        <p>High-altitude Andean grasslands (puna) with unique vegetation adapted to cold and dry conditions.</p>
+      </div>
+    </div>
+
   </div>
-
-  <script>
-    const slides = document.querySelector('.slides');
-    const slideCount = slides.children.length;
-    let index = 0;
-
-    document.getElementById('next').addEventListener('click', () => {
-      index = (index + 1) % slideCount;
-      slides.style.transform = `translateX(-${index * 100}%)`;
-    });
-
-    document.getElementById('prev').addEventListener('click', () => {
-      index = (index - 1 + slideCount) % slideCount;
-      slides.style.transform = `translateX(-${index * 100}%)`;
-    });
-  </script>
 
 </body>
 </html>
