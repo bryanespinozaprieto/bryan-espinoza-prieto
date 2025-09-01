@@ -109,3 +109,13 @@ nav a:hover {
 .btn:hover {
     background-color: #0066cc;
 }
+
+/* Italic for scientific names */
+i {
+    font-style: italic;
+}
+
+/* Bold for your name in publications */
+.pub-author {
+    font-weight: bold;
+}
