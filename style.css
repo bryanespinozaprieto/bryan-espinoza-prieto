@@ -14,9 +14,9 @@ body {
 .banner img {
   width: 100%;
   height: auto;
-  max-height: 250px; /* altura del banner */
-  object-fit: cover;   /* llena el banner sin deformarse */
-  object-position: center top; /* 👈 enfoca la parte superior */
+  max-height: 250px;       /* altura del banner */
+  object-fit: cover;        /* llena el banner sin deformarse */
+  object-position: center top; /* enfoca la parte superior */
   filter: brightness(70%);
 }
 .banner-text {
@@ -39,7 +39,7 @@ body {
 /* 🔹 Menú */
 header {
   display: flex;
-  justify-content: center; /* 👈 centra las pestañas */
+  justify-content: center; /* centra las pestañas */
   align-items: center;
   padding: 1rem 2rem;
   background: #13315c;
