@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Bryan Espinoza-Prieto - Web</title>
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- 🔹 Banner -->
+  <!-- Banner -->
   <div class="banner">
     <img src="img/banner.jpg" alt="Banner">
     <div class="banner-text">
@@ -18,26 +17,16 @@
     </div>
   </div>
 
-  <!-- 🔹 Menú -->
+  <!-- Menú -->
   <header>
     <nav>
       <ul id="menu-en">
-        <li>Home</li>
-        <li>CV</li>
-        <li>Publications</li>
-        <li>Peru ecosystems</li>
-        <li>Moss uses</li>
-        <li>Bryophyte photos</li>
-        <li>Outreach</li>
+        <li onclick="showSection('home')">Home</li>
+        <li onclick="showSection('cv')">CV</li>
       </ul>
       <ul id="menu-es" class="hidden">
-        <li>Inicio</li>
-        <li>CV</li>
-        <li>Publicaciones</li>
-        <li>Ecosistemas del Perú</li>
-        <li>Uso de musgos</li>
-        <li>Fotos de briofitas</li>
-        <li>Divulgación</li>
+        <li onclick="showSection('home')">Inicio</li>
+        <li onclick="showSection('cv')">CV</li>
       </ul>
     </nav>
     <div class="lang-switch">
@@ -46,44 +35,108 @@
     </div>
   </header>
 
-  <!-- 🔹 Contenido Home -->
+  <!-- Secciones -->
   <div class="content">
 
-    <!-- ENGLISH -->
-    <div id="content-en">
+    <!-- HOME ENGLISH -->
+    <section id="home-en">
       <div class="home-intro">
         <img src="img/profile.jpg" alt="Bryan Espinoza-Prieto" class="profile-photo">
         <div class="intro-text">
           <p>Hello! My name is <strong>Bryan Espinoza-Prieto</strong>, and I am from Lima, Peru. I completed my undergraduate studies at Universidad Nacional Mayor de San Marcos, and throughout this time, my research has focused on the taxonomy of <em>Frullania</em> and bryophyte floristics in Peru. Currently, my work focuses on resolving species complexes, understanding evolutionary history, and studying the distribution of this genus in the Neotropics. I aim to combine fieldwork, herbarium studies, and genomic approaches to delimit species, infer phylogenies, and study evolutionary patterns in the region. In my free time, I love being outdoors, exploring natural areas, collecting plants, and taking photos. Recently, I have started photographing bryophytes to upload them to iNaturalist. When not in the field, I enjoy exploring nightlife in cities, trying different types of beers, and solving puzzles. Welcome to my page!</p>
         </div>
       </div>
-    </div>
+    </section>
 
-    <!-- ESPAÑOL -->
-    <div id="content-es" class="hidden">
+    <!-- HOME ESPAÑOL -->
+    <section id="home-es" class="hidden">
       <div class="home-intro">
         <img src="img/profile.jpg" alt="Bryan Espinoza-Prieto" class="profile-photo">
         <div class="intro-text">
           <p>¡Hola! Me llamo <strong>Bryan Espinoza-Prieto</strong> y soy de Lima, Perú. Terminé mis estudios de pregrado en la Universidad Nacional Mayor de San Marcos, y durante todo este tiempo mi investigación se ha centrado en la taxonomía de <em>Frullania</em> y la florística de briofitas en Perú. Actualmente, mi trabajo se enfoca en resolver complejos de especies, historia evolutiva y distribución de este género en el Neotrópico. Estoy pensando en combinar trabajo de campo, estudios en herbarios y enfoques genómicos para delimitar especies, inferir filogenias y estudiar patrones evolutivos en la región. En mi tiempo libre, me encanta estar al aire libre, explorar áreas naturales, recolectar plantas y tomar fotos. Actualmente, estoy empezando a fotografiar briofitas para subirlas a iNaturalist. Cuando no estoy en el campo, me gusta explorar la vida nocturna en las ciudades, probar diferentes tipos de cervezas y resolver acertijos. ¡Bienvenido a mi página!</p>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- CV ENGLISH -->
+    <section id="cv-en" class="hidden">
+      <div class="card">
+        <h2>Short CV (Selected)</h2>
+        <h3>Education</h3>
+        <ul>
+          <li><strong>B.Sc. in Biological Sciences</strong>, Universidad Nacional Mayor de San Marcos, Lima, Peru (2015).</li>
+        </ul>
+        <h3>Experience</h3>
+        <ul>
+          <li>Visiting researcher, Missouri Botanical Garden, Saint Louis, USA (Oct 2022–Jan 2023; Sept 2023–Aug 2024; Nov 2024–Jan 2025).</li>
+          <li>Visiting researcher, Field Museum of Natural History, Chicago, USA (Sept 2024–Nov 2024).</li>
+          <li>Collaborating researcher, Museo de Historia Natural, Universidad Nacional Mayor de San Marcos (2015–present).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Full CV</h2>
+        <p>Download my full CV in PDF with complete publications, teaching, and technical skills.</p>
+        <p>
+          <a class="btn" href="files/CV_Bryan_Espinoza.pdf" target="_blank" rel="noopener">⬇️ Download CV (PDF)</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- CV ESPAÑOL -->
+    <section id="cv-es" class="hidden">
+      <div class="card">
+        <h2>CV Corto (Seleccionado)</h2>
+        <h3>Educación</h3>
+        <ul>
+          <li><strong>B.Sc. en Ciencias Biológicas</strong>, Universidad Nacional Mayor de San Marcos, Lima, Perú (2015).</li>
+        </ul>
+        <h3>Experiencia</h3>
+        <ul>
+          <li>Investigador visitante, Missouri Botanical Garden, Saint Louis, USA (Oct 2022–Jan 2023; Sept 2023–Aug 2024; Nov 2024–Jan 2025).</li>
+          <li>Investigador visitante, Field Museum of Natural History, Chicago, USA (Sept 2024–Nov 2024).</li>
+          <li>Investigador colaborador, Museo de Historia Natural, Universidad Nacional Mayor de San Marcos (2015–presente).</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>CV Completo</h2>
+        <p>Descarga mi CV completo en PDF con todas mis publicaciones, enseñanza y habilidades técnicas.</p>
+        <p>
+          <a class="btn" href="files/CV_Bryan_Espinoza.pdf" target="_blank" rel="noopener">⬇️ Descargar CV (PDF)</a>
+        </p>
+      </div>
+    </section>
 
   </div>
 
+  <!-- Scripts -->
   <script>
     function setLanguage(lang) {
-      if (lang === 'en') {
+      if(lang === 'en') {
         document.getElementById('menu-en').classList.remove('hidden');
-        document.getElementById('content-en').classList.remove('hidden');
+        document.getElementById('home-en').classList.remove('hidden');
+        document.getElementById('cv-en').classList.remove('hidden');
         document.getElementById('menu-es').classList.add('hidden');
-        document.getElementById('content-es').classList.add('hidden');
+        document.getElementById('home-es').classList.add('hidden');
+        document.getElementById('cv-es').classList.add('hidden');
       } else {
         document.getElementById('menu-es').classList.remove('hidden');
-        document.getElementById('content-es').classList.remove('hidden');
+        document.getElementById('home-es').classList.remove('hidden');
+        document.getElementById('cv-es').classList.remove('hidden');
         document.getElementById('menu-en').classList.add('hidden');
-        document.getElementById('content-en').classList.add('hidden');
+        document.getElementById('home-en').classList.add('hidden');
+        document.getElementById('cv-en').classList.add('hidden');
       }
+    }
+
+    function showSection(section) {
+      // Ocultar todas las secciones de Home y CV
+      document.querySelectorAll('section').forEach(sec => sec.classList.add('hidden'));
+
+      // Mostrar según idioma
+      let lang = document.getElementById('menu-en').classList.contains('hidden') ? 'es' : 'en';
+      document.getElementById(section + '-' + lang).classList.remove('hidden');
     }
   </script>
 
