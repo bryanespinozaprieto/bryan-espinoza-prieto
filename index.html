@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bryan Espinoza Prieto - Web</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 🔹 Banner -->
+  <div class="banner">
+    <img src="img/banner.jpg" alt="Banner">
+    <div class="banner-text">
+      <h1>Bryan Espinoza Prieto</h1>
+      <p>Research on Bryophytes & Peruvian Ecosystems</p>
+    </div>
+  </div>
+
+  <!-- 🔹 Menú -->
+  <header>
+    <nav>
+      <ul id="menu-en">
+        <li>Home</li>
+        <li>CV</li>
+        <li>Publications</li>
+        <li>Peru ecosystems</li>
+        <li>Moss uses</li>
+        <li>Bryophyte photos</li>
+        <li>Outreach</li>
+      </ul>
+      <ul id="menu-es" class="hidden">
+        <li>Inicio</li>
+        <li>CV</li>
+        <li>Publicaciones</li>
+        <li>Ecosistemas del Perú</li>
+        <li>Uso de musgos</li>
+        <li>Fotos de briofitas</li>
+        <li>Divulgación</li>
+      </ul>
+    </nav>
+    <div class="lang-switch">
+      <img src="https://flagcdn.com/w20/gb.png" alt="English" onclick="setLanguage('en')">
+      <img src="https://flagcdn.com/w20/es.png" alt="Español" onclick="setLanguage('es')">
+    </div>
+  </header>
+
+  <!-- 🔹 Contenido -->
+  <div class="content">
+    <div id="content-en">
+      <h2>Welcome!</h2>
+      <p>This is my academic and professional website.</p>
+    </div>
+    <div id="content-es" class="hidden">
+      <h2>¡Bienvenido!</h2>
+      <p>Este es mi sitio web académico y profesional.</p>
+    </div>
+  </div>
+
+  <script>
+    function setLanguage(lang) {
+      if (lang === 'en') {
+        document.getElementById('menu-en').classList.remove('hidden');
+        document.getElementById('content-en').classList.remove('hidden');
+        document.getElementById('menu-es').classList.add('hidden');
+        document.getElementById('content-es').classList.add('hidden');
+      } else {
+        document.getElementById('menu-es').classList.remove('hidden');
+        document.getElementById('content-es').classList.remove('hidden');
+        document.getElementById('menu-en').classList.add('hidden');
+        document.getElementById('content-en').classList.add('hidden');
+      }
+    }
+  </script>
+
+</body>
+</html>
