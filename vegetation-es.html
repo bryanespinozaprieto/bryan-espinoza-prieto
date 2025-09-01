@@ -2,84 +2,9 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Bryan Espinoza-Prieto - Tipos de Vegetación en Perú</title>
+  <title>Tipos de Vegetación en Perú - Bryan Espinoza-Prieto</title>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Slider Styles */
-    .slider {
-      position: relative;
-      width: 100%;
-      max-width: 1200px;
-      margin: 2rem auto;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-    }
-    .slides {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-    .slide {
-      min-width: 100%;
-      box-sizing: border-box;
-      position: relative;
-    }
-    .slide img {
-      width: 100%;
-      display: block;
-      object-fit: cover;
-      max-height: 600px;
-    }
-    .slide-text {
-      position: absolute;
-      top: 50%;
-      left: 5%;
-      transform: translateY(-50%);
-      color: white;
-      background: rgba(0,0,0,0.5);
-      padding: 1.5rem;
-      border-radius: 8px;
-      max-width: 45%;
-    }
-    .slide p {
-      font-size: 1.1rem;
-      line-height: 1.6;
-    }
-    .slide-below img {
-      max-height: 500px;
-      width: 100%;
-    }
-    .slide-below p {
-      position: relative;
-      top: 0;
-      background: none;
-      color: #333;
-      padding: 0.8rem 1rem;
-      font-size: 1.05rem;
-    }
-    .slider-buttons {
-      position: absolute;
-      top: 50%;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      transform: translateY(-50%);
-    }
-    .slider-buttons button {
-      background: rgba(19, 49, 92, 0.6);
-      border: none;
-      color: white;
-      padding: 0.8rem 1.2rem;
-      cursor: pointer;
-      font-size: 1rem;
-      border-radius: 6px;
-    }
-    .slider-buttons button:hover {
-      background: #ffcc00;
-      color: #13315c;
-    }
-  </style>
 </head>
 <body>
 
@@ -99,7 +24,7 @@
         <li><a href="index-es.html">Inicio</a></li>
         <li><a href="cv-es.html">CV</a></li>
         <li><a href="publications-es.html">Publicaciones</a></li>
-        <li><a href="vegetation-es.html">Tipos de Vegetación en Perú</a></li>
+        <li><a href="vegetation-es.html">Tipos de Vegetación</a></li>
       </ul>
       <div class="lang-switch">
         <a href="vegetation.html"><img src="https://flagcdn.com/w20/gb.png" alt="English"></a>
@@ -110,48 +35,43 @@
 
   <!-- Slider -->
   <div class="slider">
-    <div class="slides">
-      <!-- Primer Slide -->
-      <div class="slide">
-        <img src="img/peru.jpg" alt="Mapa de Perú">
-        <div class="slide-text">
-          <h2>Tipos de Vegetación en Perú</h2>
-          <p>Perú es uno de los países más biodiversos del mundo, gracias a su geografía única que incluye los Andes, la Amazonía y la costa del Pacífico. Esta increíble variedad de climas y altitudes ha generado una amplia gama de ecosistemas, cada uno hogar de una rica variedad de especies de plantas y animales. Desde los exuberantes bosques amazónicos y los pastizales andinos de gran altitud hasta las colinas costeras alimentadas por la niebla, los paisajes de Perú sostienen diversos tipos de vegetación, cada uno con flora única adaptada a las condiciones locales.</p>
-          <p>Las siguientes fotos muestran la diversidad de tipos de vegetación en todo el país, destacando áreas donde se han observado o reportado briofitas.</p>
-        </div>
+    <!-- Slide 1 -->
+    <div class="slide slide-1">
+      <div class="slide-text">
+        <h2>Tipos de Vegetación en Perú</h2>
+        <p>
+          Perú es uno de los países más biodiversos del mundo, gracias a su geografía única que incluye los Andes, la Amazonía y la costa del Pacífico. Esta increíble variedad de climas y altitudes ha generado una amplia gama de ecosistemas, cada uno con una rica diversidad de especies de plantas y animales. Desde los frondosos bosques amazónicos y los pastizales andinos de gran altitud hasta los cerros costeros con neblina, los paisajes de Perú albergan distintos tipos de vegetación, cada uno con flora adaptada a las condiciones locales.
+        </p>
+        <p>
+          Las siguientes fotos muestran la diversidad de vegetación en el país, destacando áreas donde se han observado o reportado briofitas.
+        </p>
       </div>
-      <!-- Slides de ejemplo para futuras fotos -->
-      <div class="slide slide-below">
-        <img src="img/amazon_forest.jpg" alt="Bosque Amazónico">
-        <p>Bosque Amazónico: Bosque tropical denso con alta diversidad de briofitas.</p>
-      </div>
-      <div class="slide slide-below">
-        <img src="img/andes_grassland.jpg" alt="Páramo Andino">
-        <p>Páramo Andino de gran altitud: Paisajes abiertos con especies de musgos únicas adaptadas a condiciones extremas.</p>
+      <div class="slide-image">
+        <img src="img/peru-map.jpg" alt="Mapa de Perú">
       </div>
     </div>
 
-    <div class="slider-buttons">
-      <button id="prev">&#10094; Anterior</button>
-      <button id="next">Siguiente &#10095;</button>
+    <!-- Slide 2 -->
+    <div class="slide slide-2">
+      <div class="slide-image-full">
+        <img src="img/amazon-forest.jpg" alt="Bosque Amazónico">
+      </div>
+      <div class="slide-caption">
+        <p>Frondoso bosque amazónico con alta diversidad de briofitas.</p>
+      </div>
     </div>
+
+    <!-- Slide 3 -->
+    <div class="slide slide-3">
+      <div class="slide-image-full">
+        <img src="img/andean-puna.jpg" alt="Puna Andina">
+      </div>
+      <div class="slide-caption">
+        <p>Pastizales andinos de gran altitud (puna) con vegetación adaptada al frío y a la sequía.</p>
+      </div>
+    </div>
+
   </div>
-
-  <script>
-    const slides = document.querySelector('.slides');
-    const slideCount = slides.children.length;
-    let index = 0;
-
-    document.getElementById('next').addEventListener('click', () => {
-      index = (index + 1) % slideCount;
-      slides.style.transform = `translateX(-${index * 100}%)`;
-    });
-
-    document.getElementById('prev').addEventListener('click', () => {
-      index = (index - 1 + slideCount) % slideCount;
-      slides.style.transform = `translateX(-${index * 100}%)`;
-    });
-  </script>
 
 </body>
 </html>
