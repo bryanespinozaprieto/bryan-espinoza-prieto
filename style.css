@@ -120,9 +120,13 @@ nav ul li a:hover {
   line-height: 1.5em;
 }
 
-/* Nombre en negrita */
+/* Nombre en negrita y nombres científicos en cursiva */
 .card ul li strong {
   font-weight: bold;
+}
+
+.card ul li em {
+  font-style: italic;
 }
 
 /* Home: foto + texto lado a lado */
