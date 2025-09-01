@@ -16,7 +16,7 @@ body {
   height: auto;
   max-height: 250px;         /* altura del banner */
   object-fit: cover;          /* llena el banner sin deformarse */
-  object-position: center 30%; /* mueve la imagen un poco hacia abajo */
+  object-position: center 10%; /* mueve la imagen un poco hacia abajo */
   filter: brightness(70%);
 }
 .banner-text {
@@ -78,3 +78,4 @@ nav ul li:hover {
 .hidden {
   display: none;
 }
+
