@@ -9,13 +9,14 @@ body {
   position: relative;
   text-align: center;
   color: white;
-  overflow: hidden; /* evita desbordes */
+  overflow: hidden;
 }
 .banner img {
   width: 100%;
   height: auto;
-  max-height: 250px; /* altura máxima del banner */
-  object-fit: cover; /* encaja sin deformarse */
+  max-height: 250px; /* altura del banner */
+  object-fit: cover;   /* llena el banner sin deformarse */
+  object-position: center top; /* 👈 enfoca la parte superior */
   filter: brightness(70%);
 }
 .banner-text {
@@ -38,7 +39,7 @@ body {
 /* 🔹 Menú */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* 👈 centra las pestañas */
   align-items: center;
   padding: 1rem 2rem;
   background: #13315c;
@@ -58,6 +59,9 @@ nav ul li {
 }
 nav ul li:hover {
   color: #ffcc00;
+}
+.lang-switch {
+  margin-left: 2rem; /* separa las banderas del menú */
 }
 .lang-switch img {
   width: 28px;
