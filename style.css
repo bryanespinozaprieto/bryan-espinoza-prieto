@@ -14,9 +14,9 @@ body {
 .banner img {
   width: 100%;
   height: auto;
-  max-height: 250px;         /* altura del banner */
-  object-fit: cover;          /* llena el banner sin deformarse */
-  object-position: center 50%; /* mueve la imagen un poco hacia abajo */
+  max-height: 250px;
+  object-fit: cover;
+  object-position: center 30%; /* mueve la imagen un poco hacia abajo */
   filter: brightness(70%);
 }
 .banner-text {
@@ -79,4 +79,52 @@ nav ul li:hover {
   display: none;
 }
 
+/* 🔹 Home Intro */
+.home-intro {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 2rem;
+  margin-top: 2rem;
+}
 
+.profile-photo {
+  width: 250px;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.intro-text {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* 🔹 Home Blocks */
+.home-blocks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.block {
+  background: #f5f5f5;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.1);
+  width: 250px;
+  text-align: center;
+}
+
+.block h3 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 0.5rem;
+}
+
+.block p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
