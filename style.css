@@ -1,34 +1,30 @@
-/* =======================================
-   General
-======================================= */
-body {
+/* Reset básico */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente */
+body {
   font-family: 'Lato', sans-serif;
-  background: #fdfdfd;
+  background: #f5f5f5;
   color: #333;
 }
 
-a {
-  text-decoration: none;
-}
-
-/* =======================================
-   Banner
-======================================= */
+/* Banner */
 .banner {
   position: relative;
-  text-align: center;
-  color: white;
+  width: 100%;
+  height: 350px;
   overflow: hidden;
 }
 
 .banner img {
   width: 100%;
-  height: auto;
-  max-height: 250px;
+  height: 100%;
   object-fit: cover;
-  object-position: center 30%; /* ajusta verticalmente */
-  filter: brightness(70%);
+  object-position: center top; /* Ajusta la posición del banner verticalmente */
 }
 
 .banner-text {
@@ -36,53 +32,48 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: white;
   text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
 }
 
 .banner-text h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.6rem;
-  margin: 0;
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
 }
 
 .banner-text p {
-  font-size: 1.3rem;
-  margin-top: 0.5rem;
-  font-weight: 500;
+  font-size: 1.2rem;
 }
 
-/* =======================================
-   Menú
-======================================= */
+/* Menú */
 header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 1rem 2rem;
   background: #13315c;
-  color: white;
 }
 
-nav ul {
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 2rem;
+}
+
+header nav ul {
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  margin: 0;
-  padding: 0;
 }
 
-nav ul li {
-  font-family: 'Poppins', sans-serif;
-  cursor: pointer;
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
   transition: color 0.3s;
 }
 
-nav ul li:hover {
+header nav ul li a:hover {
   color: #ffcc00;
-}
-
-.lang-switch {
-  margin-left: 2rem;
 }
 
 .lang-switch img {
@@ -93,24 +84,18 @@ nav ul li:hover {
   border: 1px solid #fff;
 }
 
-/* =======================================
-   Content general
-======================================= */
+/* Contenido general */
 .content {
   padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
 }
 
-.hidden {
-  display: none;
-}
-
-/* =======================================
-   Home Intro
-======================================= */
+/* Home Intro */
 .home-intro {
   display: flex;
   flex-wrap: wrap;
-  align-items: center; /* centra verticalmente el texto con la foto */
+  align-items: center;
   gap: 2rem;
   margin-top: 2rem;
 }
@@ -127,12 +112,9 @@ nav ul li:hover {
   flex: 1;
   font-size: 1.05rem;
   line-height: 1.8;
-  padding-right: 1rem;
 }
 
-/* =======================================
-   Cards (CV y futuras secciones)
-======================================= */
+/* Cards (CV) */
 .card {
   background: #ffffff;
   padding: 1.8rem 2rem;
@@ -169,7 +151,7 @@ nav ul li:hover {
   color: #333;
 }
 
-/* Botón de descarga CV */
+/* Botón */
 .btn {
   display: inline-block;
   padding: 0.6rem 1rem;
@@ -186,9 +168,7 @@ nav ul li:hover {
   color: #13315c;
 }
 
-/* =======================================
-   Responsive
-======================================= */
+/* Responsive */
 @media (max-width: 768px) {
   .home-intro {
     flex-direction: column;
@@ -197,17 +177,14 @@ nav ul li:hover {
   }
   .intro-text {
     flex: unset;
-    padding: 0 1rem;
     font-size: 1rem;
     line-height: 1.6;
   }
-
-  nav ul {
+  header nav {
     flex-direction: column;
+    align-items: flex-start;
     gap: 1rem;
-    align-items: center;
   }
-
   .lang-switch {
     margin-top: 1rem;
     margin-left: 0;
