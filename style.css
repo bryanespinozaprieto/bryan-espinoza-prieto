@@ -101,7 +101,8 @@ header nav ul li a:hover {
 }
 
 .profile-photo {
-  width: 280px;
+  width: 250px;
+  height: auto;
   max-width: 100%;
   border-radius: 12px;
   object-fit: cover;
@@ -114,7 +115,7 @@ header nav ul li a:hover {
   line-height: 1.8;
 }
 
-/* Cards (CV and Publications) */
+/* Cards (CV/Publications) */
 .card {
   background: #ffffff;
   padding: 1.8rem 2rem;
@@ -168,43 +169,18 @@ header nav ul li a:hover {
   color: #13315c;
 }
 
-/* Slider Vegetation */
-.slider {
-  width: 100%;
-  overflow: hidden;
-  margin: 2rem auto;
-}
-
+/* Slides Vegetation */
 .slide {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 3rem;
+  margin: 2rem 0;
+  position: relative;
 }
 
-.slide-1 .slide-text {
-  flex: 1;
-  padding: 2rem;
-}
-
-.slide-1 .slide-image {
-  flex: 1;
-  padding: 2rem;
-}
-
-.slide-1 .slide-image img {
+.slide img {
   width: 100%;
+  height: auto;
   border-radius: 12px;
+  display: block;
   object-fit: cover;
-  max-height: 400px;
-}
-
-.slide-image-full img {
-  width: 100%;
-  max-height: 600px;
-  object-fit: cover;
-  border-radius: 12px;
 }
 
 .slide-caption {
@@ -212,6 +188,36 @@ header nav ul li a:hover {
   font-size: 1rem;
   margin-top: 0.5rem;
   color: #333;
+}
+
+.slide-text-right {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.slide-text-right .slide-image {
+  flex: 1;
+}
+
+.slide-text-right img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.slide-text-right h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  color: #13315c;
+  margin-bottom: 1rem;
+}
+
+.slide-text-right p {
+  font-size: 1rem;
+  line-height: 1.6;
 }
 
 /* Responsive */
@@ -235,11 +241,8 @@ header nav ul li a:hover {
     margin-top: 1rem;
     margin-left: 0;
   }
-  .slide-1 {
+  .slide-text-right {
     flex-direction: column;
-  }
-  .slide-1 .slide-image,
-  .slide-1 .slide-text {
-    padding: 1rem;
+    text-align: center;
   }
 }
