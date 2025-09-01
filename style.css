@@ -9,11 +9,13 @@ body {
   position: relative;
   text-align: center;
   color: white;
+  overflow: hidden; /* evita desbordes */
 }
 .banner img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  height: auto;
+  max-height: 250px; /* altura máxima del banner */
+  object-fit: cover; /* encaja sin deformarse */
   filter: brightness(70%);
 }
 .banner-text {
@@ -21,14 +23,15 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  text-align: center;
 }
 .banner-text h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin: 0;
 }
 .banner-text p {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-top: 0.5rem;
 }
 
