@@ -1,3 +1,86 @@
+body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: #fdfdfd;
+}
+
+/* 🔹 Banner */
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+.banner img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(70%);
+}
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.banner-text h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.6rem;
+  margin: 0;
+}
+.banner-text p {
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
+  font-weight: 500;
+}
+
+/* 🔹 Menú */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #13315c;
+  color: white;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+nav ul li {
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+nav ul li:hover {
+  color: #ffcc00;
+}
+.lang-switch {
+  margin-left: 2rem;
+}
+.lang-switch img {
+  width: 28px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  border: 1px solid #fff;
+}
+
+/* 🔹 Contenido */
+.content {
+  padding: 2rem;
+}
+.hidden {
+  display: none;
+}
+
+/* 🔹 Home Intro */
 .home-intro {
   display: flex;
   flex-wrap: wrap;
@@ -11,7 +94,7 @@
   max-width: 100%;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15); /* sombra suave */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
 .intro-text {
@@ -22,7 +105,7 @@
   padding-right: 1rem;
 }
 
-/* Responsive para móviles */
+/* 🔹 Responsive */
 @media (max-width: 768px) {
   .home-intro {
     flex-direction: column;
