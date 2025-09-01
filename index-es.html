@@ -1,31 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Bryan Espinoza-Prieto - Inicio</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryan Espinoza - CV e Investigación</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <div class="banner">
+            <img src="profile.jpg" alt="Bryan Espinoza" class="profile-pic">
+            <h1>Bryan Espinoza</h1>
+            <div class="language-buttons">
+                <button onclick="switchLanguage('en')">English</button>
+                <button onclick="switchLanguage('es')">Español</button>
+            </div>
+        </div>
+    </header>
 
-<header>
-    <img src="img/banner.jpg" alt="Banner" class="banner">
-    <h1>Bryan Espinoza-Prieto</h1>
-    <h2>Investigación sobre Briofitas</h2>
-</header>
+    <nav>
+        <ul>
+            <li><a href="#research">Investigación</a></li>
+            <li><a href="#cv">CV</a></li>
+            <li><a href="#photos">Fotos</a></li>
+            <li><a href="#contact">Contacto</a></li>
+        </ul>
+    </nav>
 
-<nav>
-    <a href="index-es.html">Inicio</a>
-    <a href="cv-es.html">CV</a>
-    <a href="publications-es.html">Publicaciones</a>
-    <a href="index.html"><img src="img/uk-flag.png" class="lang-btn" alt="English"></a>
-</nav>
+    <main>
+        <section id="research">
+            <h2>Investigación</h2>
+            <p>Mi investigación se centra en la taxonomía, florística y distribución de briofitas, especialmente las especies de Frullania en Perú.</p>
+            <p>Actualmente estudio Frullania peruana, la brioflora de las formaciones de Lomas, los bosques relictos de Lima y los bosques montanos del centro de Perú.</p>
+        </section>
 
-<div class="container profile">
-    <img src="img/profile.jpg" alt="Bryan Espinoza-Prieto">
-    <div class="profile-text">
-        <p>¡Hola! Mi nombre es Bryan, y soy de Lima, Perú. Finalicé mis estudios de B.Sc. en Ciencias Biológicas en la Universidad Nacional Mayor de San Marcos, y durante todo este tiempo mi investigación se ha centrado en la taxonomía de <em>Frullania</em> y la florística de briofitas en Perú. Actualmente, mi trabajo se enfoca en resolver complejos de especies, historia evolutiva y distribución de este género en el Neotrópico. Planeo combinar trabajo de campo, estudios en herbario y enfoques genómicos para delimitar especies, inferir filogenias y estudiar patrones evolutivos en la región. En mi tiempo libre, me encanta estar al aire libre, explorar áreas naturales, recolectar plantas y tomar fotos. Actualmente, estoy comenzando a fotografiar briofitas para subirlas a iNaturalist. Si no estoy en campo, me gusta explorar la vida nocturna de las ciudades, probar diferentes tipos de cervezas y resolver acertijos.</p>
-    </div>
-</div>
+        <section id="cv">
+            <h2>Curriculum Vitae</h2>
+            <p>CV resumido:</p>
+            <ul>
+                <li>Investigador en el Departamento de Briología y Pteridología, Museo de Historia Natural, Universidad Nacional Mayor de San Marcos.</li>
+                <li>Postulante a programa de posgrado en taxonomía vegetal y briología.</li>
+            </ul>
+            <p>Descargar CV completo: <a href="cv.pdf" target="_blank">CV PDF</a></p>
+        </section>
 
+        <section id="photos">
+            <h2>Fotos</h2>
+            <div class="photo-gallery">
+                <div class="photo-item">
+                    <img src="fieldwork1.jpg" alt="Trabajo de campo 1">
+                    <p>Trabajo de campo en Manu</p>
+                </div>
+                <div class="photo-item">
+                    <img src="bryophyte1.jpg" alt="Briofita 1">
+                    <p>Especies de Frullania</p>
+                </div>
+                <div class="photo-item">
+                    <img src="outreach1.jpg" alt="Difusión 1">
+                    <p>Actividades de divulgación en el museo</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contacto</h2>
+            <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
+            <p>Teléfono: +1 555-123-4567</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bryan Espinoza</p>
+    </footer>
+
+    <script>
+        function switchLanguage(lang) {
+            if(lang === 'es') {
+                window.location.href = 'index_es.html';
+            } else {
+                window.location.href = 'index.html';
+            }
+        }
+    </script>
 </body>
 </html>
