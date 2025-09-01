@@ -2,81 +2,62 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
-    background: #f8f9fa;
+    background: #f9f9f9;
     color: #333;
 }
 
 header {
-    background: #003366;
+    background: #004466;
     color: white;
-    padding: 20px 0;
+    padding: 15px 0;
     text-align: center;
 }
 
 nav {
-    margin-top: 10px;
+    background: #006699;
+    display: flex;
+    justify-content: center;
 }
 
 nav a {
     color: white;
-    margin: 0 15px;
+    padding: 14px 20px;
     text-decoration: none;
-    font-weight: bold;
+    text-align: center;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    background: #004466;
 }
 
 .container {
-    width: 80%;
+    width: 85%;
     margin: auto;
-    overflow: hidden;
-    padding: 20px 0;
+    padding: 20px;
 }
 
 .profile {
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    gap: 20px;
 }
 
 .profile img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    margin-right: 20px;
-    object-fit: cover;
-    border: 3px solid #003366;
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
 }
 
 h1, h2, h3 {
-    color: #003366;
+    color: #004466;
 }
 
-a.pdf-link {
-    display: inline-block;
-    margin: 10px 0;
-    padding: 8px 15px;
-    background: #003366;
-    color: white;
-    border-radius: 5px;
-    text-decoration: none;
+.publications-list {
+    list-style: none;
+    padding: 0;
 }
 
-a.pdf-link:hover {
-    background: #0055a5;
-}
-
-.publications p {
-    margin-bottom: 10px;
-}
-
-.publications i {
-    font-style: italic;
-}
-
-.publications b {
-    font-weight: bold;
+.publications-list li {
+    margin-bottom: 12px;
+    text-align: justify;
 }
