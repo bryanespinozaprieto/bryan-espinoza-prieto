@@ -131,6 +131,7 @@ nav ul li a:hover {
   flex-wrap: wrap;
   align-items: center;
   gap: 30px;
+  justify-content: center;
 }
 
 .home-container img {
