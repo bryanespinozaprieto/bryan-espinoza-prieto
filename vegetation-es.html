@@ -32,36 +32,84 @@
   </header>
 
   <div class="content">
-    <div class="slide">
-      <div class="slide-text-right">
-        <h2>Tipos de Vegetación de Perú</h2>
-        <p>
-          Perú es uno de los países más biodiversos del mundo, gracias a su geografía única que incluye la cordillera de los Andes, la selva amazónica y la costa del Pacífico. Esta increíble variedad de climas y altitudes ha generado una amplia gama de ecosistemas, cada uno hogar de una rica variedad de especies vegetales y animales. Desde las exuberantes selvas amazónicas y los pastizales andinos de gran altitud hasta las colinas costeras alimentadas por niebla, los paisajes peruanos albergan distintos tipos de vegetación, cada uno con flora adaptada a las condiciones locales.
-        </p>
-        <p>
-          Las siguientes fotos muestran la diversidad de tipos de vegetación en todo el país, destacando áreas donde se han observado o reportado briofitas.
-        </p>
+    <div class="slideshow-container">
+
+      <!-- Slide 1: Introducción -->
+      <div class="slide fade">
+        <div class="slide-text-left">
+          <h2>Tipos de Vegetación en Perú</h2>
+          <p>
+            Perú es uno de los países más biodiversos del mundo, gracias a su geografía única que incluye los Andes, la selva amazónica y la costa del Pacífico. Esta increíble variedad de climas y altitudes ha creado una amplia gama de ecosistemas, cada uno con una rica diversidad de flora y fauna. Desde los frondosos bosques amazónicos y los pastizales de altura andinos hasta las colinas costeras con niebla, los paisajes peruanos albergan diversos tipos de vegetación, cada uno con flora adaptada a las condiciones locales.
+          </p>
+          <p>
+            Las siguientes fotos muestran la diversidad de tipos de vegetación en todo el país, destacando áreas donde se han observado o reportado briofitas.
+          </p>
+        </div>
+        <div class="slide-image">
+          <img src="img/peru.jpg" alt="Mapa de Perú">
+        </div>
       </div>
-      <div class="slide-image">
-        <img src="img/peru.jpg" alt="Mapa de Perú">
+
+      <!-- Slide 2 -->
+      <div class="slide fade">
+        <img src="img/amazon_forest.jpg" alt="Selva Amazónica">
+        <p class="slide-caption">Selva Amazónica – alta diversidad de briofitas.</p>
       </div>
+
+      <!-- Slide 3 -->
+      <div class="slide fade">
+        <img src="img/andean_grasslands.jpg" alt="Pastizales Andinos">
+        <p class="slide-caption">Pastizales de altura andinos con flora única.</p>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide fade">
+        <img src="img/coastal_hills.jpg" alt="Colinas Costeras">
+        <p class="slide-caption">Colinas costeras con niebla que soportan diversas plantas.</p>
+      </div>
+
+      <!-- Botones Next/Prev -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <div class="slide">
-      <img src="img/amazon_forest.jpg" alt="Selva Amazónica">
-      <p class="slide-caption">Selva Amazónica – alta diversidad de briofitas.</p>
-    </div>
-
-    <div class="slide">
-      <img src="img/andean_grasslands.jpg" alt="Pastizales Andinos">
-      <p class="slide-caption">Pastizales andinos de gran altitud con flora única.</p>
-    </div>
-
-    <div class="slide">
-      <img src="img/coastal_hills.jpg" alt="Colinas Costeras">
-      <p class="slide-caption">Colinas costeras alimentadas por niebla con vegetación diversa.</p>
+    <!-- Dots -->
+    <div style="text-align:center; margin-top:10px;">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
     </div>
   </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
 
 </body>
 </html>
