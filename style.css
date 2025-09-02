@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-/* Fuente */
 body {
   font-family: 'Lato', sans-serif;
   background: #f5f5f5;
@@ -84,90 +83,6 @@ header nav ul li a:hover {
   border: 1px solid #fff;
 }
 
-/* Contenido general */
-.content {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
-}
-
-/* Home Intro */
-.home-intro {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.profile-photo {
-  width: 280px;
-  max-width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-.intro-text {
-  flex: 1;
-  font-size: 1.05rem;
-  line-height: 1.8;
-}
-
-/* Cards (CV) */
-.card {
-  background: #ffffff;
-  padding: 1.8rem 2rem;
-  margin: 1.5rem auto;
-  border-radius: 12px;
-  max-width: 900px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-}
-
-.card h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.9rem;
-  color: #13315c;
-  margin-bottom: 1rem;
-}
-
-.card h3 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.3rem;
-  color: #13315c;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
-}
-
-.card ul {
-  list-style-type: disc;
-  margin-left: 2rem;
-  line-height: 1.6;
-}
-
-.card p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* Botón */
-.btn {
-  display: inline-block;
-  padding: 0.6rem 1rem;
-  background: #13315c;
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-
-.btn:hover {
-  background: #ffcc00;
-  color: #13315c;
-}
-
 /* Slider */
 .slider-container {
   max-width: 900px;
@@ -181,17 +96,17 @@ header nav ul li a:hover {
 }
 
 .slide img {
-  width: 100%;
   max-height: 500px;
-  object-fit: cover;
-  border-radius: 12px;
+  width: auto;
+  border-radius: 12px; /* mantiene bordes redondeados */
+  margin: 1rem auto;
 }
 
 .first-slide img {
-  width: 70%;
-  max-width: 600px;
-  margin: 1rem auto 0 auto;
+  max-height: 400px;
+  width: auto;
   display: block;
+  margin: 1rem auto;
 }
 
 .prev, .next {
@@ -222,38 +137,9 @@ header nav ul li a:hover {
   font-size: 1rem;
 }
 
-/* Bryophyte photos slider */
-.bryophyte-slide img {
-  max-height: 500px; /* altura máxima */
-  width: auto;        /* ancho ajusta según altura */
-  border-radius: 12px;
-  display: block;
-  margin: 1rem auto;
-}
-
 /* Responsive */
 @media (max-width: 768px) {
-  .home-intro {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  .intro-text {
-    flex: unset;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  header nav {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1rem;
-  }
-  .lang-switch {
-    margin-top: 1rem;
-    margin-left: 0;
-  }
-  .first-slide img {
-    width: 90%;
-    max-width: 400px;
+  .first-slide img, .slide img {
+    max-height: 300px;
   }
 }
