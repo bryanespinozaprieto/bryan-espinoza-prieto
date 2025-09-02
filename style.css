@@ -168,16 +168,15 @@ header nav ul li a:hover {
   color: #13315c;
 }
 
-/* Slides - Vegetation Types */
-.slideshow-container {
+/* Slider */
+.slider-container {
+  max-width: 900px;
+  margin: 2rem auto;
   position: relative;
-  margin: auto;
-  max-width: 1000px;
 }
 
 .slide {
   display: none;
-  padding: 2rem;
   text-align: center;
 }
 
@@ -186,56 +185,24 @@ header nav ul li a:hover {
   max-height: 500px;
   object-fit: cover;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  margin-bottom: 1rem;
 }
 
-.slide-text-left {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+.first-slide img {
+  width: 70%;
+  max-width: 600px;
+  margin: 1rem auto 0 auto;
+  display: block;
 }
 
-.slide-text-left .slide-image {
-  flex: 1;
-}
-
-.slide-text-left .slide-image img {
-  width: 500px;
-  max-width: 100%;
-}
-
-.slide-text-left .slide-text {
-  flex: 1;
-  text-align: left;
-}
-
-.slide-text-left h2 {
-  font-family: 'Poppins', sans-serif;
-  color: #13315c;
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.slide-text-left p {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-/* Next & previous buttons */
 .prev, .next {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
   padding: 1rem;
-  margin-top: -22px;
+  margin-top: -30px;
   color: white;
   font-weight: bold;
   font-size: 2rem;
-  transition: 0.3s;
   border-radius: 0 3px 3px 0;
   user-select: none;
   background-color: rgba(0,0,0,0.3);
@@ -250,20 +217,9 @@ header nav ul li a:hover {
   background-color: rgba(0,0,0,0.6);
 }
 
-/* Dots */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 4px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.3s;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
+.slide p {
+  margin-top: 0.8rem;
+  font-size: 1rem;
 }
 
 /* Responsive */
@@ -278,14 +234,6 @@ header nav ul li a:hover {
     font-size: 1rem;
     line-height: 1.6;
   }
-  .slide-text-left {
-    flex-direction: column;
-    text-align: center;
-  }
-  .slide-text-left .slide-image img {
-    width: 100%;
-    margin-top: 1rem;
-  }
   header nav {
     flex-direction: column;
     align-items: flex-start;
@@ -295,7 +243,8 @@ header nav ul li a:hover {
     margin-top: 1rem;
     margin-left: 0;
   }
-  .profile-photo {
-    width: 180px;
+  .first-slide img {
+    width: 90%;
+    max-width: 400px;
   }
 }
