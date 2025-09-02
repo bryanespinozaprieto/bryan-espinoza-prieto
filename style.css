@@ -144,29 +144,28 @@ header nav ul li a:hover {
   }
 }
 
+/* Home Intro */
 .home-intro {
   display: flex;
-  flex-wrap: wrap;       /* Permite que en pantallas pequeñas el texto baje */
-  align-items: flex-start; /* Alinea la foto y el texto arriba */
+  flex-wrap: wrap;
+  align-items: center;
   gap: 2rem;
+  margin-top: 2rem;
 }
 
 .profile-photo {
-  width: auto;
-  max-width: 280px;
-  max-height: 280px;
+  width: 280px;
+  max-width: 100%;
   border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  flex-shrink: 0; /* Evita que la foto se reduzca demasiado */
 }
 
 .intro-text {
-  flex: 1;              /* Ocupa el resto del espacio */
+  flex: 1;
   font-size: 1.05rem;
   line-height: 1.8;
 }
-
 
 /* Cards (CV) */
 .card {
@@ -221,6 +220,7 @@ header nav ul li a:hover {
   background: #ffcc00;
   color: #13315c;
 }
+
 
 
 
