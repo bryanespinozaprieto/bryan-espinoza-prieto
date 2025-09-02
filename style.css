@@ -146,20 +146,27 @@ header nav ul li a:hover {
 
 .home-intro {
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-wrap: wrap;       /* Permite que en pantallas pequeñas el texto baje */
+  align-items: flex-start; /* Alinea la foto y el texto arriba */
   gap: 2rem;
-  justify-content: center; /* Centra el contenido */
 }
 
 .profile-photo {
-  width: auto;           /* Que respete la proporción */
-  max-width: 280px;      /* No más de 280px de ancho */
-  max-height: 280px;     /* Limita la altura también */
-  border-radius: 12px;   /* Bordes redondeados */
+  width: auto;
+  max-width: 280px;
+  max-height: 280px;
+  border-radius: 12px;
   object-fit: cover;
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  flex-shrink: 0; /* Evita que la foto se reduzca demasiado */
 }
+
+.intro-text {
+  flex: 1;              /* Ocupa el resto del espacio */
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
 
 /* Cards (CV) */
 .card {
@@ -214,6 +221,7 @@ header nav ul li a:hover {
   background: #ffcc00;
   color: #13315c;
 }
+
 
 
 
