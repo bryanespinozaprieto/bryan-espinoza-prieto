@@ -114,7 +114,7 @@ header nav ul li a:hover {
   line-height: 1.8;
 }
 
-/* Cards (CV, Publications) */
+/* Cards (CV) */
 .card {
   background: #ffffff;
   padding: 1.8rem 2rem;
@@ -168,7 +168,7 @@ header nav ul li a:hover {
   color: #13315c;
 }
 
-/* Slider (Vegetation & Bryophyte Photos) */
+/* Slider */
 .slider-container {
   max-width: 900px;
   margin: 2rem auto;
@@ -222,14 +222,13 @@ header nav ul li a:hover {
   font-size: 1rem;
 }
 
-/* Bryophyte Photos slider special */
+/* Bryophyte photos slider */
 .bryophyte-slide img {
-  width: 80%;
-  max-width: 600px;
-  margin: 0.8rem auto;
-  display: block;
+  max-height: 500px; /* altura máxima */
+  width: auto;        /* ancho ajusta según altura */
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  display: block;
+  margin: 1rem auto;
 }
 
 /* Responsive */
@@ -254,10 +253,6 @@ header nav ul li a:hover {
     margin-left: 0;
   }
   .first-slide img {
-    width: 90%;
-    max-width: 400px;
-  }
-  .bryophyte-slide img {
     width: 90%;
     max-width: 400px;
   }
