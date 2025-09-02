@@ -8,6 +8,7 @@
 </head>
 <body>
 
+  <!-- Banner -->
   <div class="banner">
     <img src="img/banner.jpg" alt="Banner">
     <div class="banner-text">
@@ -16,6 +17,7 @@
     </div>
   </div>
 
+  <!-- Menu -->
   <header>
     <nav>
       <ul>
@@ -23,7 +25,6 @@
         <li><a href="cv.html">CV</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="vegetation.html">Vegetation Types</a></li>
-        <li><a href="bryophytes.html">Bryophyte Photos</a></li>
       </ul>
       <div class="lang-switch">
         <a href="vegetation.html"><img src="https://flagcdn.com/w20/gb.png" alt="English"></a>
@@ -32,31 +33,43 @@
     </nav>
   </header>
 
+  <!-- Slider -->
   <div class="slider-container">
+
+    <!-- Slide 1: Intro -->
     <div class="slide first-slide">
       <h2>Vegetation Types of Peru</h2>
-      <p>Peru is one of the most biodiverse countries in the world, thanks to its unique geography including the Andes, Amazon, and Pacific coast. This incredible range of climates and altitudes has created many ecosystems, each home to rich diversity of plants and animals. From lush Amazonian forests and high-altitude Andean grasslands to coastal hills with fog, Peru’s landscapes host a wide variety of vegetation types, each with flora adapted to local conditions.</p>
-      <p>The following images highlight areas where bryophytes have been observed or reported.</p>
-      <img src="img/peru_map.jpg" alt="Map of Peru" class="map-slide">
+      <p>
+        Peru is one of the most biodiverse countries in the world due to its unique geography, including the Andes, the Amazon, and the Pacific coast. This incredible variety of climates and altitudes has created a wide range of ecosystems, each home to a rich diversity of plant and animal species. From lush Amazonian forests and high-altitude Andean grasslands to foggy coastal hills, Peru's landscapes host diverse vegetation types, each with flora adapted to local conditions.
+      </p>
+      <p>
+        The following photos show the diversity of vegetation types in the country, highlighting areas where bryophytes have been observed or reported.
+      </p>
+      <img src="img/peru_map.jpg" alt="Map of Peru">
     </div>
 
+    <!-- Slide 2 -->
     <div class="slide">
       <img src="img/amazon_forest.jpg" alt="Amazon Forest">
-      <p>Western montane forests, limited to northern Peru up to Ecuador and Colombia. One of the type specimens of <em>Frullania heinrichsii</em> Gradst., Espinoza-Prieto & J.J. Atwood was collected here.</p>
+      <p>Western Andean montane forests. These forests are restricted to northern Peru, reaching Ecuador and Colombia. One of the type specimens of <i>Frullania heinrichsii</i> Gradst., Espinoza-Prieto & J.J. Atwood was found and described in this forest type.</p>
     </div>
 
+    <!-- Slide 3 -->
     <div class="slide">
       <img src="img/andean_grassland.jpg" alt="Andean Grassland">
-      <p>Transition zone between eastern montane forests and high-altitude grasslands, around 3300 m. Photo: Diego Paredes-Burneo.</p>
+      <p>Transition zone between eastern montane forests and high-altitude grasslands, approximately 3300 m. Photo: Diego Paredes-Burneo.</p>
     </div>
 
+    <!-- Slide 4 -->
     <div class="slide">
       <img src="img/coastal_hills.jpg" alt="Coastal Hills">
-      <p>Queñua forests dominated by <em>Polylepis</em> spp., appearing as patches or relics in high-Andean zones (3500–4900 m).</p>
+      <p>Queñual forests. These forests, dominated by "queñua" species (<i>Polylepis</i> spp.), appear as patches or relics in high Andean zones, between 3500 and 4900 m.</p>
     </div>
 
+    <!-- Navigation -->
     <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
     <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
   </div>
 
   <script>
@@ -65,7 +78,9 @@
     const totalSlides = slides.length;
 
     function showSlide(index) {
-      slides.forEach((slide, i) => slide.style.display = (i === index) ? 'block' : 'none');
+      slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none';
+      });
     }
 
     function changeSlide(n) {
@@ -75,6 +90,7 @@
       showSlide(slideIndex);
     }
 
+    // Show first slide initially
     showSlide(slideIndex);
   </script>
 
