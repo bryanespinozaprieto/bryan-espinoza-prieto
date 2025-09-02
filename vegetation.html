@@ -48,3 +48,35 @@
     <div class="slide">
       <img src="img/andean_grassland.jpg" alt="Andean Grassland">
       <p>Transition zone between eastern montane forests and high-altitude grasslands, around 3300 m. Photo: Diego Paredes-Burneo.</p>
+    </div>
+
+    <div class="slide">
+      <img src="img/coastal_hills.jpg" alt="Coastal Hills">
+      <p>Queñua forests dominated by <em>Polylepis</em> spp., appearing as patches or relics in high-Andean zones (3500–4900 m).</p>
+    </div>
+
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => slide.style.display = (i === index) ? 'block' : 'none');
+    }
+
+    function changeSlide(n) {
+      slideIndex += n;
+      if(slideIndex >= totalSlides) slideIndex = 0;
+      if(slideIndex < 0) slideIndex = totalSlides - 1;
+      showSlide(slideIndex);
+    }
+
+    showSlide(slideIndex);
+  </script>
+
+</body>
+</html>
