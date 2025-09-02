@@ -32,36 +32,84 @@
   </header>
 
   <div class="content">
-    <div class="slide">
-      <div class="slide-text-right">
-        <h2>Vegetation Types of Peru</h2>
-        <p>
-          Peru is one of the most biodiverse countries in the world, thanks to its unique geography that includes the Andes Mountains, the Amazon rainforest, and the Pacific coast. This incredible variety of climates and altitudes has created a wide range of ecosystems, each home to a rich array of plant and animal species. From the lush Amazonian forests and high-altitude Andean grasslands to the fog-fed coastal hills, Peru’s landscapes support diverse vegetation types, each with its own unique flora adapted to local conditions.
-        </p>
-        <p>
-          The following photos showcase the diversity of vegetation types across the country, highlighting areas where bryophytes have been observed or reported.
-        </p>
+    <div class="slideshow-container">
+
+      <!-- Slide 1: Introduction -->
+      <div class="slide fade">
+        <div class="slide-text-left">
+          <h2>Vegetation Types of Peru</h2>
+          <p>
+            Peru is one of the most biodiverse countries in the world, thanks to its unique geography that includes the Andes Mountains, the Amazon rainforest, and the Pacific coast. This incredible variety of climates and altitudes has created a wide range of ecosystems, each home to a rich array of plant and animal species. From the lush Amazonian forests and high-altitude Andean grasslands to the fog-fed coastal hills, Peru’s landscapes support diverse vegetation types, each with its own unique flora adapted to local conditions.
+          </p>
+          <p>
+            The following photos showcase the diversity of vegetation types across the country, highlighting areas where bryophytes have been observed or reported.
+          </p>
+        </div>
+        <div class="slide-image">
+          <img src="img/peru.jpg" alt="Peru Map">
+        </div>
       </div>
-      <div class="slide-image">
-        <img src="img/peru.jpg" alt="Peru Map">
+
+      <!-- Slide 2 -->
+      <div class="slide fade">
+        <img src="img/amazon_forest.jpg" alt="Amazon Forest">
+        <p class="slide-caption">Amazon Rainforest – rich bryophyte diversity.</p>
       </div>
+
+      <!-- Slide 3 -->
+      <div class="slide fade">
+        <img src="img/andean_grasslands.jpg" alt="Andean Grasslands">
+        <p class="slide-caption">High-altitude Andean grasslands with unique flora.</p>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="slide fade">
+        <img src="img/coastal_hills.jpg" alt="Coastal Hills">
+        <p class="slide-caption">Fog-fed coastal hills supporting diverse plants.</p>
+      </div>
+
+      <!-- Next/Prev buttons -->
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
 
-    <div class="slide">
-      <img src="img/amazon_forest.jpg" alt="Amazon Forest">
-      <p class="slide-caption">Amazon Rainforest – rich bryophyte diversity.</p>
-    </div>
-
-    <div class="slide">
-      <img src="img/andean_grasslands.jpg" alt="Andean Grasslands">
-      <p class="slide-caption">High-altitude Andean grasslands with unique flora.</p>
-    </div>
-
-    <div class="slide">
-      <img src="img/coastal_hills.jpg" alt="Coastal Hills">
-      <p class="slide-caption">Fog-fed coastal hills supporting diverse plants.</p>
+    <!-- Dots -->
+    <div style="text-align:center; margin-top:10px;">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
     </div>
   </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+  </script>
 
 </body>
 </html>
