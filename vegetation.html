@@ -8,7 +8,6 @@
 </head>
 <body>
 
-  <!-- Banner -->
   <div class="banner">
     <img src="img/banner.jpg" alt="Banner">
     <div class="banner-text">
@@ -17,7 +16,6 @@
     </div>
   </div>
 
-  <!-- Menú -->
   <header>
     <nav>
       <ul>
@@ -25,6 +23,7 @@
         <li><a href="cv.html">CV</a></li>
         <li><a href="publications.html">Publications</a></li>
         <li><a href="vegetation.html">Vegetation Types</a></li>
+        <li><a href="bryophytes.html">Bryophyte Photos</a></li>
       </ul>
       <div class="lang-switch">
         <a href="vegetation.html"><img src="https://flagcdn.com/w20/gb.png" alt="English"></a>
@@ -33,67 +32,19 @@
     </nav>
   </header>
 
-  <!-- Slider -->
   <div class="slider-container">
-
-    <!-- Slide 1: Intro -->
     <div class="slide first-slide">
       <h2>Vegetation Types of Peru</h2>
-      <p>
-        Peru is one of the most biodiverse countries in the world, thanks to its unique geography that includes the Andes Mountains, the Amazon rainforest, and the Pacific coast. This incredible variety of climates and altitudes has created a wide range of ecosystems, each home to a rich array of plant and animal species. From the lush Amazonian forests and high-altitude Andean grasslands to the fog-fed coastal hills, Peru’s landscapes support diverse vegetation types, each with its own unique flora adapted to local conditions.
-      </p>
-      <p>
-        The following photos showcase the diversity of vegetation types across the country, highlighting areas where bryophytes have been observed or reported.
-      </p>
-      <img src="img/peru_map.jpg" alt="Map of Peru">
+      <p>Peru is one of the most biodiverse countries in the world, thanks to its unique geography including the Andes, Amazon, and Pacific coast. This incredible range of climates and altitudes has created many ecosystems, each home to rich diversity of plants and animals. From lush Amazonian forests and high-altitude Andean grasslands to coastal hills with fog, Peru’s landscapes host a wide variety of vegetation types, each with flora adapted to local conditions.</p>
+      <p>The following images highlight areas where bryophytes have been observed or reported.</p>
+      <img src="img/peru_map.jpg" alt="Map of Peru" class="map-slide">
     </div>
 
-    <!-- Slide 2 -->
     <div class="slide">
       <img src="img/amazon_forest.jpg" alt="Amazon Forest">
-      <p>Montane forests of the western slope. These forests are restricted to the northern part of Peru, extending into Ecuador and Colombia. In this type of forest, one of the type specimens of <i>Frullania heinrichsii</i> Gradst., Espinoza-Prieto & J.J. Atwood was found and described.</p>
+      <p>Western montane forests, limited to northern Peru up to Ecuador and Colombia. One of the type specimens of <em>Frullania heinrichsii</em> Gradst., Espinoza-Prieto & J.J. Atwood was collected here.</p>
     </div>
 
-    <!-- Slide 3 -->
     <div class="slide">
       <img src="img/andean_grassland.jpg" alt="Andean Grassland">
-      <p>Border zone between montane forests of the eastern slope and high-Andean grasslands, approximately 3300 m. Photo: Diego Paredes-Burneo.</p>
-    </div>
-
-    <!-- Slide 4 -->
-    <div class="slide">
-      <img src="img/coastal_hills.jpg" alt="Coastal Hills">
-      <p><i>Polylepis forests</i>. These forests, dominated by species of “queñua” (<i>Polylepis</i> spp.), occur as patches or relicts in high-Andean areas, between 3500 and 4900 m.</p>
-    </div>
-
-    <!-- Navigation -->
-    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-    <a class="next" onclick="changeSlide(1)">&#10095;</a>
-
-  </div>
-
-  <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.slide');
-    const totalSlides = slides.length;
-
-    function showSlide(index) {
-      slides.forEach((slide, i) => {
-        slide.style.display = (i === index) ? 'block' : 'none';
-      });
-    }
-
-    function changeSlide(n) {
-      slideIndex += n;
-      if(slideIndex >= totalSlides) slideIndex = 0;
-      if(slideIndex < 0) slideIndex = totalSlides - 1;
-      showSlide(slideIndex);
-    }
-
-    // Show first slide initially
-    showSlide(slideIndex);
-  </script>
-
-</body>
-</html>
-
+      <p>Transition zone between eastern montane forests and high-altitude grasslands, around 3300 m. Photo: Diego Paredes-Burneo.</p>
