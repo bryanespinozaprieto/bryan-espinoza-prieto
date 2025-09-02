@@ -143,3 +143,15 @@ header nav ul li a:hover {
     max-height: 300px;
   }
 }
+
+/* Foto de perfil */
+.profile-photo {
+  width: 280px;           /* ancho fijo o ajustable */
+  max-width: 100%;        /* se adapta a pantallas pequeñas */
+  height: auto;           /* mantiene proporción */
+  border-radius: 25px 5px 25px 5px; /* bordes no rectos */
+  object-fit: cover;      /* recorta para llenar el área */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  display: block;
+  margin: 0 auto;         /* centrado horizontal */
+}
