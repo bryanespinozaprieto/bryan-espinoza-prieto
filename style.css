@@ -1,120 +1,179 @@
-/* Reset */
-* {
+/* GENERAL */
+body {
+  font-family: 'Lato', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-
-/* Body */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  background: #f9f9f9;
+  background-color: #f9f9f9;
   color: #333;
 }
 
-/* Navbar */
-.navbar {
-  background: #003366;
-  padding: 10px 0;
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
 }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.navbar li {
-  margin: 0 15px;
-}
-
-.navbar a {
-  color: #fff;
+a {
   text-decoration: none;
-  font-weight: bold;
-  padding: 6px 10px;
-  border-radius: 4px;
-  transition: background 0.3s;
+  color: #333;
 }
 
-.navbar a:hover,
-.navbar a.active {
-  background: #0055a5;
+ul {
+  list-style-type: none;
+  padding-left: 0;
 }
 
-/* Header */
-.header {
-  text-align: center;
-  padding: 40px 20px;
-  background: #e6f0ff;
-}
-
-.header h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
-}
-
-.header p {
-  font-size: 1.2em;
-  color: #555;
-}
-
-/* Carousel */
-.carousel-container {
-  position: relative;
-  max-width: 800px;
-  margin: 40px auto;
-  text-align: center;
-}
-
-.carousel .slide {
-  display: none;
-}
-
-.carousel .slide.active {
+img {
+  max-width: 100%;
+  height: auto;
   display: block;
 }
 
-.carousel img {
+/* BANNER */
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.banner img {
   width: 100%;
-  max-height: 500px;
-  object-fit: contain;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  height: auto;
 }
 
-.carousel p {
-  margin-top: 12px;
-  font-size: 16px;
-  font-style: italic;
-  color: #444;
-}
-
-/* Controls */
-.prev, .next {
+.banner-text {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
-  background: rgba(0,0,0,0.5);
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.banner-text h1 {
+  font-size: 2.5em;
+}
+
+.banner-text p {
+  font-size: 1.2em;
+}
+
+/* NAVIGATION */
+header nav {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 2em;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+header nav ul {
+  display: flex;
+  gap: 1em;
+}
+
+.lang-switch img {
+  width: 20px;
+  margin-left: 10px;
+}
+
+/* CONTENT CARDS */
+.content {
+  padding: 2em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 1.5em;
+  margin-bottom: 2em;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+}
+
+.card h2 {
+  margin-top: 0;
+}
+
+.btn {
+  background-color: #0077cc;
   color: white;
-  font-size: 28px;
-  padding: 10px;
-  border: none;
-  cursor: pointer;
+  padding: 0.5em 1em;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* HOME PHOTO */
+.profile-photo {
+  max-width: 200px;
+  float: left;
+  margin-right: 1em;
   border-radius: 50%;
 }
 
-.prev { left: -50px; }
-.next { right: -50px; }
-
-.prev:hover, .next:hover {
-  background: rgba(0,0,0,0.8);
+.intro-text p {
+  line-height: 1.5em;
 }
 
-/* Responsive */
+/* SLIDER */
+.slider-container {
+  position: relative;
+  max-width: 900px;
+  margin: 2em auto;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 1em;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.slide img {
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 1em;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5em;
+  border-radius: 50%;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* MAP SLIDE */
+.map-slide {
+  max-height: 500px;
+  margin-top: 1em;
+}
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .prev { left: 10px; }
-  .next { right: 10px; }
+  .banner-text h1 {
+    font-size: 2em;
+  }
+  .banner-text p {
+    font-size: 1em;
+  }
+  .profile-photo {
+    float: none;
+    margin: auto;
+    display: block;
+  }
 }
