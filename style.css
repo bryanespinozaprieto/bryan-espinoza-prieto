@@ -101,8 +101,7 @@ header nav ul li a:hover {
 }
 
 .profile-photo {
-  width: 250px;
-  height: auto;
+  width: 280px;
   max-width: 100%;
   border-radius: 12px;
   object-fit: cover;
@@ -115,7 +114,7 @@ header nav ul li a:hover {
   line-height: 1.8;
 }
 
-/* Cards (CV/Publications) */
+/* Cards (CV) */
 .card {
   background: #ffffff;
   padding: 1.8rem 2rem;
@@ -169,55 +168,102 @@ header nav ul li a:hover {
   color: #13315c;
 }
 
-/* Slides Vegetation */
-.slide {
-  margin: 2rem 0;
+/* Slides - Vegetation Types */
+.slideshow-container {
   position: relative;
+  margin: auto;
+  max-width: 1000px;
+}
+
+.slide {
+  display: none;
+  padding: 2rem;
+  text-align: center;
 }
 
 .slide img {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
-  display: block;
+  max-height: 500px;
   object-fit: cover;
-}
-
-.slide-caption {
-  text-align: center;
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  color: #333;
-}
-
-.slide-text-right {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2rem;
-  margin-bottom: 2rem;
-}
-
-.slide-text-right .slide-image {
-  flex: 1;
-}
-
-.slide-text-right img {
-  width: 100%;
   border-radius: 12px;
-  object-fit: cover;
-}
-
-.slide-text-right h2 {
-  font-family: 'Poppins', sans-serif;
-  font-size: 2rem;
-  color: #13315c;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   margin-bottom: 1rem;
 }
 
-.slide-text-right p {
+.slide-text-left {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.slide-text-left .slide-image {
+  flex: 1;
+}
+
+.slide-text-left .slide-image img {
+  width: 500px;
+  max-width: 100%;
+}
+
+.slide-text-left .slide-text {
+  flex: 1;
+  text-align: left;
+}
+
+.slide-text-left h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #13315c;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.slide-text-left p {
   font-size: 1rem;
   line-height: 1.6;
+  color: #333;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 1rem;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+  transition: 0.3s;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.3);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.6);
+}
+
+/* Dots */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 4px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
 }
 
 /* Responsive */
@@ -232,6 +278,14 @@ header nav ul li a:hover {
     font-size: 1rem;
     line-height: 1.6;
   }
+  .slide-text-left {
+    flex-direction: column;
+    text-align: center;
+  }
+  .slide-text-left .slide-image img {
+    width: 100%;
+    margin-top: 1rem;
+  }
   header nav {
     flex-direction: column;
     align-items: flex-start;
@@ -241,8 +295,7 @@ header nav ul li a:hover {
     margin-top: 1rem;
     margin-left: 0;
   }
-  .slide-text-right {
-    flex-direction: column;
-    text-align: center;
+  .profile-photo {
+    width: 180px;
   }
 }
