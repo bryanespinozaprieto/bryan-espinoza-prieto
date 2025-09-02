@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bryophyte Photos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="banner">
+    <img src="img/banner.jpg" alt="Banner">
+    <div class="banner-text">
+      <h1>Bryan Espinoza-Prieto</h1>
+      <p>Research on Bryophytes</p>
+    </div>
+  </div>
+
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="vegetation.html">Vegetation Types</a></li>
+        <li><a href="bryophytes.html">Bryophyte Photos</a></li>
+      </ul>
+      <div class="lang-switch">
+        <a href="bryophytes.html"><img src="https://flagcdn.com/w20/gb.png" alt="English"></a>
+        <a href="bryophytes-es.html"><img src="https://flagcdn.com/w20/es.png" alt="Español"></a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="slider-container">
+
+    <div class="slide first-slide">
+      <h2>Bryophyte Photos</h2>
+      <p>Below are photos of various bryophyte species. Each slide shows a species with its description.</p>
+    </div>
+
+    <!-- Slides for 19 photos -->
+    <div class="slide"><img src="img/species_1.jpg" alt="Species 1"><p>Species 1 description.</p></div>
+    <div class="slide"><img src="img/species_2.jpg" alt="Species 2"><p>Species 2 description.</p></div>
+    <div class="slide"><img src="img/species_3.jpg" alt="Species 3"><p>Species 3 description.</p></div>
+    <div class="slide"><img src="img/species_4.jpg" alt="Species 4"><p>Species 4 description.</p></div>
+    <div class="slide"><img src="img/species_5.jpg" alt="Species 5"><p>Species 5 description.</p></div>
+    <div class="slide"><img src="img/species_6.jpg" alt="Species 6"><p>Species 6 description.</p></div>
+    <div class="slide"><img src="img/species_7.jpg" alt="Species 7"><p>Species 7 description.</p></div>
+    <div class="slide"><img src="img/species_8.jpg" alt="Species 8"><p>Species 8 description.</p></div>
+    <div class="slide"><img src="img/species_9.jpg" alt="Species 9"><p>Species 9 description.</p></div>
+    <div class="slide"><img src="img/species_10.jpg" alt="Species 10"><p>Species 10 description.</p></div>
+    <div class="slide"><img src="img/species_11.jpg" alt="Species 11"><p>Species 11 description.</p></div>
+    <div class="slide"><img src="img/species_12.jpg" alt="Species 12"><p>Species 12 description.</p></div>
+    <div class="slide"><img src="img/species_13.jpg" alt="Species 13"><p>Species 13 description.</p></div>
+    <div class="slide"><img src="img/species_14.jpg" alt="Species 14"><p>Species 14 description.</p></div>
+    <div class="slide"><img src="img/species_15.jpg" alt="Species 15"><p>Species 15 description.</p></div>
+    <div class="slide"><img src="img/species_16.jpg" alt="Species 16"><p>Species 16 description.</p></div>
+    <div class="slide"><img src="img/species_17.jpg" alt="Species 17"><p>Species 17 description.</p></div>
+    <div class="slide"><img src="img/species_18.jpg" alt="Species 18"><p>Species 18 description.</p></div>
+    <div class="slide"><img src="img/species_19.jpg" alt="Species 19"><p>Species 19 description.</p></div>
+
+    <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+    <a class="next" onclick="changeSlide(1)">&#10095;</a>
+
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'block' : 'none';
+      });
+    }
+
+    function changeSlide(n) {
+      slideIndex += n;
+      if(slideIndex >= totalSlides) slideIndex = 0;
+      if(slideIndex < 0) slideIndex = totalSlides - 1;
+      showSlide(slideIndex);
+    }
+
+    showSlide(slideIndex);
+  </script>
+
+</body>
+</html>
